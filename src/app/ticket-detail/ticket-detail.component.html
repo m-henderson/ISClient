@@ -1,0 +1,10 @@
+<div *ngIf="ticket">
+    <h2>{{ ticket.title | uppercase }} Details</h2>
+    <div><span>id: </span>{{ticket.id}}</div>
+    <div>
+      <label>name:
+        <input value="{{ticket.title}}" placeholder="title"/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+  </div>

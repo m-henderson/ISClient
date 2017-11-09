@@ -13,9 +13,9 @@ export class TicketComponent implements OnInit {
   tickets = [];
 
   ngOnInit() {
-    this.getTickets();
+    this.getAll();
   }
-  getTickets() {
-    this.ticketService.GetTickets().subscribe(response => this.tickets = response);
+  getAll() {
+    this.ticketService.GetAll().subscribe(response => this.tickets = response);
   }
 }

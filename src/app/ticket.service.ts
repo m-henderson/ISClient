@@ -7,8 +7,12 @@ export class TicketService {
 
   constructor(private http: Http) { }
 
-  GetTickets() {
-   return this.http.get('http://localhost:52086/api/tickets').map(response => response.json());
+  GetTickets(id: number) {
+   return this.http.get('http://localhost:52086/api/tickets/' + id ).map(response => response.json());
+  }
+
+  GetAll() {
+    return this.http.get('http://localhost:52086/api/tickets').map(response => response.json());
   }
 
 

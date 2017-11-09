@@ -7,12 +7,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TicketComponent
+    TicketComponent,
+    TicketDetailComponent
   ],
   imports: [
     BrowserModule,
