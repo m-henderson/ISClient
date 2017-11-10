@@ -1,19 +1,22 @@
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Description</th>
-        <th scope="col">Created</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let ticket of tickets">
-        <th scope="row">{{ticket.id}}</th>
-        <td>{{ticket.Title}}</td>
-        <td>{{ticket.description}}</td>
-        <td>{{ticket.dateCreated}}</td>
-      </tr>
-      <tr>
-    </tbody>
-  </table>
+<div class="row" style="margin-top: 20px;">
+    <div class="col" style="overflow-y: scroll; height:400px;">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ticket of tickets" (click)="selectedTicket(ticket)">
+                {{ticket.title}}
+            </li>
+        </ul>
+    </div>
+    <div class="col" *ngIf="isATicketSelected">
+        <div class="card">
+            <div class="card-header">
+                  {{ selectTicket.dateCreated | date }}
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{ selectTicket.title }}</h4>
+                <p class="card-text">{{ selectTicket.description }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+

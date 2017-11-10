@@ -2,3 +2,8 @@
 .list-group li:hover {
     background: #ADD8E6;
 }
+
+tr:hover {
+    background: #428bca;
+    color: white;
+}
