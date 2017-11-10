@@ -8,11 +8,11 @@ export class TicketService {
   constructor(private http: Http) { }
 
   GetTickets(id: number) {
-   return this.http.get('http://localhost:52086/api/tickets/' + id ).map(response => response.json());
+   return this.http.get('http://192.168.0.32:8090/api/tickets/' + id ).map(response => response.json());
   }
 
   GetAll() {
-    return this.http.get('http://localhost:52086/api/tickets').map(response => response.json());
+    return this.http.get('http://192.168.0.32:8090/api/tickets').map(response => response.json());
   }
 
 
