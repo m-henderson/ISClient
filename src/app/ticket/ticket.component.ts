@@ -22,6 +22,10 @@ export class TicketComponent implements OnInit {
     this.ticketService.GetAll().subscribe(response => this.tickets = response);
   }
 
+  postTicket(ticket: Ticket) {
+    this.ticketService.PostTicket(ticket).subscribe();
+  }
+
   selectedTicket(ticket: Ticket) {
     this.selectTicket = ticket;
     this.isATicketSelected = true;

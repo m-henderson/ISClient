@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
+import { TicketFormComponent } from './ticket-form/ticket-form.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TicketComponent,
-    TicketDetailComponent
+    TicketDetailComponent,
+    TicketFormComponent
   ],
   imports: [
     BrowserModule,
